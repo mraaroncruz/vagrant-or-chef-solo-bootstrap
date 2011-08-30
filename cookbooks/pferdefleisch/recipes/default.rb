@@ -1,6 +1,9 @@
 # execute "apt-get update" do
 #   user 'root'
 # end
+# this is because my dns was messed up in my vagrant box
+# i set the dns to 8.8.8.8, google's dns
+# comment out if you don't need
 cookbook_file "/etc/resolv.conf" do
   source 'resolve.conf'
   owner  'root'
