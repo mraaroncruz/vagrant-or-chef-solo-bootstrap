@@ -16,13 +16,17 @@ end
   end
 end
 
+# this is my default install, the best rvm cookbook i've found is at
+# https://github.com/fnichol/chef-rvm
+# this installs system rvm so at /usr/local/rvm instead of ~/.rvm
+
 # include_recipe "rvm::system"
 
-execute 'update rubygems' do
-  user 'root'
-  command 'gem update --system'
-  action :run
-end
+# execute 'update rubygems' do
+#   user 'root'
+#   command 'gem update --system'
+#   action :run
+# end
 
 cookbook_file "/home/#{node[:user]}/.vimrc" do
   source 'vimrc'
