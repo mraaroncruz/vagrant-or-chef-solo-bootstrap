@@ -16,7 +16,7 @@ end
   end
 end
 
-include_recipe "rvm::system"
+# include_recipe "rvm::system"
 
 execute 'update rubygems' do
   user 'root'
@@ -24,13 +24,13 @@ execute 'update rubygems' do
   action :run
 end
 
-cookbook_file "/home/vagrant/.vimrc" do
+cookbook_file "/home/#{node[:user]}/.vimrc" do
   source 'vimrc'
   owner  node[:user]
   group  node[:user]
 end
 
-remote_directory '/home/vagrant/.vim' do
+remote_directory "/home/#{node[:user]}/.vim" do
   source 'vim'
   files_owner node[:user]
   files_group node[:user]
