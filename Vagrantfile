@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
 
-  config.vm.box = "base"
+  config.vm.box = "ubuntu-1110-server-amd64"
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.

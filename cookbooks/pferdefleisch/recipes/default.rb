@@ -15,7 +15,7 @@ end
   #group  'root'
 #end
 
-%w[wget curl git-core build-essential vim-nox nginx zsh-beta zsh-dev].each do |pkg|
+%w[wget curl git-core build-essential vim-nox nginx zsh-beta zsh-dev ffmpeg melt].each do |pkg|
   package pkg do
     action :install
   end
