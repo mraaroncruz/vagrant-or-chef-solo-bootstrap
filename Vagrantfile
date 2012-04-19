@@ -34,6 +34,9 @@ Vagrant::Config.run do |config|
     #db_config.vm.network :hostonly, "22.22.22.23"
   #end
 
+  config.vm.forward_port(80, 8080)
+  config.vm.network :hostonly, "22.22.22.22"
+
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "pferdefleisch"
