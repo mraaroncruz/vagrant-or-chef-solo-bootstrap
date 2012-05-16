@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
 
-  config.vm.box = "base"
+  config.vm.box = "ubuntu-1110-server-amd64"
 
   # Assign this VM to a host only network IP, allowing you to access it
   # via the IP.
@@ -35,11 +35,16 @@ Vagrant::Config.run do |config|
   #end
 
   config.vm.forward_port(80, 8080)
+  config.vm.forward_port(3000, 3030)
   config.vm.network :hostonly, "22.22.22.22"
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "pferdefleisch"
+    chef.add_recipe "pferdefleisch::dotfiles"
+    chef.add_recipe "pferdefleisch::rbenv"
+    chef.add_recipe "pferdefleisch::postgresql"
+    chef.add_recipe "pferdefleisch::mlt"
     chef.json = { :user => "vagrant" }
   end
 
