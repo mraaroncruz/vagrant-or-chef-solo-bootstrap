@@ -2,7 +2,7 @@ HOME = "/home/#{node[:user]}"
 RUBY_VER = "1.9.3-p194"
 RBENV = "#{HOME}/.rbenv/bin/rbenv"
 
-%w[zlib1g-dev libxml2-dev libxslt-dev nodejs].each do |pkg|
+%w[zlib1g-dev libxml2-dev libxslt1-dev nodejs].each do |pkg|
   package pkg do
     action :install
   end

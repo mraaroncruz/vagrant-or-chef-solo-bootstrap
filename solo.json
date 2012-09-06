@@ -1,8 +1,6 @@
 {
     "run_list": [
-        "recipe[pferdefleisch]", 
-        "recipe[mongodb]", 
-        "recipe[mongodb::server]"
+      "recipe[pferdefleisch::dotfiles]"
     ],
     "user": "aaron"
 }
