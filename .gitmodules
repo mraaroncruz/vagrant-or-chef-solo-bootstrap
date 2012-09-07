@@ -1,6 +1,0 @@
-[submodule "cookbooks/pferdefleisch/files/default/oh-my-zsh"]
-	path = cookbooks/pferdefleisch/files/default/oh-my-zsh
-	url = git://github.com/pferdefleisch/oh-my-zsh
-[submodule "cookbooks/pferdefleisch/files/default/dotfiles"]
-	path = cookbooks/pferdefleisch/files/default/dotfiles
-	url = git://github.com/pferdefleisch/dotfiles
