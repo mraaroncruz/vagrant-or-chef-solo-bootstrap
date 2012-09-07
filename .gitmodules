@@ -1,3 +1,6 @@
 [submodule "cookbooks/php-fpm"]
 	path = cookbooks/php-fpm
 	url = git@github.com:pferdefleisch/php-fpm.git
+[submodule "cookbooks/nagios"]
+	path = cookbooks/nagios
+	url = git://github.com/pferdefleisch/nagios-nginx-cookbook.git
