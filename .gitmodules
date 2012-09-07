@@ -1,0 +1,3 @@
+[submodule "cookbooks/php-fpm"]
+	path = cookbooks/php-fpm
+	url = git@github.com:pferdefleisch/php-fpm.git
