@@ -1,5 +1,3 @@
-include_recipe 'mlt::default'
-
 git "mlt" do
   repository "git://github.com/mltframework/mlt.git"
   reference 'master'
