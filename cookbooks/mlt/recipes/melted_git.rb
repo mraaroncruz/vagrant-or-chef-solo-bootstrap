@@ -5,8 +5,8 @@ git "melted" do
   action :checkout
 end
 
-execute "Install melted" do
-  cmd = <<-COMMAND.gsub(/^\s*/, '')
+bash "Install melted" do
+  code <<-COMMAND.gsub(/^\s*/, '')
     cd #{node[:melted][:source_directory]}
     ./configure --prefix=/usr/local
     cd src
@@ -29,7 +29,5 @@ execute "Install melted" do
     make install
     ldconfig
   COMMAND
-  command cmd
-  action :run
 end
 

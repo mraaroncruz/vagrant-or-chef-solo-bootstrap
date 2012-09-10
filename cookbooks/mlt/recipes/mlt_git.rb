@@ -5,13 +5,12 @@ git "mlt" do
   action :checkout
 end
 
-execute "Install mlt" do
-  command <<-COMMAND.gsub(/^\s*/,'')
+bash "Install mlt" do
+  code <<-COMMAND.gsub(/^\s*/,'')
     cd #{node[:mlt][:source_directory]}
     ./configure
     make
     make install
     ldconfig
   COMMAND
-  action :run
 end
